@@ -1,0 +1,100 @@
+import javax.swing.*;
+
+public class JavaLibs5026211010 {
+    public static void main(String[] args) {
+
+        //1 Nama
+        String name = JOptionPane.showInputDialog("Halo! Nama kamu siapa?");
+        JOptionPane.showMessageDialog(null, "Halo! "+name+", nama kamu bagus.");
+
+        //2 Gender
+        String[] acceptablevalues = {"cowok" , "cewek"};
+        String gender = (String)JOptionPane.showInputDialog(null, "Kamu", "jenis kelamin",2,null,acceptablevalues,acceptablevalues[1]);
+        JOptionPane.showMessageDialog(null, "Oh, ternyata kamu "+gender+".");
+
+        //3 Umur
+        String age = JOptionPane.showInputDialog("Kamu umur berapa sekarang?");
+        int ageConvert=Integer.parseInt(age);
+        if ( ageConvert > 35 ) {
+            JOptionPane.showMessageDialog(null, "Wow, kamu udah berumur juga ya!");
+        } else if ( ageConvert == 19 ) {
+            JOptionPane.showMessageDialog(null, "Ih "+name+" kita seumuran lho.");
+        } else {
+            JOptionPane.showMessageDialog(null, "Oh.. umur kamu "+age+".");
+        }
+
+        //4 Kuliah
+        String School=JOptionPane.showInputDialog("Terus kamu kuliah dimana ? |1 = ITS 2 = Lulus 3 = Lain|");
+        int SchoolConvert=Integer.parseInt(School);
+        if (SchoolConvert == 1 ){
+            JOptionPane.showMessageDialog(null,"WIH "+name+" AREK SURABAYA NIH");
+        }else if (SchoolConvert == 2 ) {
+            JOptionPane.showMessageDialog(null, "Ohh, udah lulus tua dong.");
+        }else {
+            JOptionPane.showMessageDialog(null,"Ohh anak luar salam kenal, ya!");
+        }
+
+        //5 Tinggi
+        String height=JOptionPane.showInputDialog("Ngomong-ngomong, tinggi kamu berapa deh?");
+        int heightconvert=Integer.parseInt(height);
+        if ( heightconvert > 200 ) {
+            JOptionPane.showMessageDialog(null, "Boong banget deh "+name+"!");
+        } else if ( heightconvert == 165 ) {
+            JOptionPane.showMessageDialog(null, "IH "+name+" TINGGI KITA SAMAA!!");
+        } else if ( heightconvert < 100 ) {
+            JOptionPane.showMessageDialog(null, "Boong ya kamu! Masa pendek banget.");
+        } else if ( heightconvert > 165 ) {
+            JOptionPane.showMessageDialog(null, "Wih "+name+" kamu lebih tinggi dari aku dongg");
+        } else {
+            JOptionPane.showMessageDialog(null, "Wah tinggi kamu "+height+", lebih pendek dari aku dong xixi");
+        }
+
+        //
+        JOptionPane.showMessageDialog(null, "Btw, mau cobain kalkulator aku gaa? Cobain yayaya");
+
+        //6-8 Kalkulator
+        String number1 = JOptionPane.showInputDialog("Coba deh masukin satu angka (bukan desimal yaaa)");
+        int number11 = Integer.parseInt(number1);
+        String number2 = JOptionPane.showInputDialog("Okeey coba masukin satu angka lagi");
+        int number22 = Integer.parseInt(number2);
+        JOptionPane.showMessageDialog(null,"Oke Angka mu adalah " +number11+" dan "+number22);
+        String operator = JOptionPane.showInputDialog("Mau dikali (1) atau dibagi (2) nih ? ( masukin angka 1 untuk kali 2 untuk bagi)");
+        int operatorx = Integer.parseInt(operator);
+        int result;
+        if (operatorx == 1){
+            result = number11 * number22;
+            JOptionPane.showMessageDialog(null,"Hasilnya perkalianya adalah " +result);
+        }else if(operatorx == 2){
+            result = number11 / number22;
+            JOptionPane.showMessageDialog(null,"Hasilnya pembagianya adalah " +result);
+        }else{
+            JOptionPane.showMessageDialog(null,"Kamu harusnya masukin 1 atau 2 yaudah deh lanjut");
+        }
+
+        //
+        JOptionPane.showMessageDialog(null, "Bentar! Aku punya kalkulator lain nih tapi yang desimal, cobain juga yaa");
+
+        //9-11 Kalkulator double
+        String number3 = JOptionPane.showInputDialog("Coba deh masukin satu angka lagi (tapi sekarang yang desimal yaaa)");
+        double number33 = Double.parseDouble(number3);
+        String number4 = JOptionPane.showInputDialog("Okeey coba masukin satu angka lagi");
+        double number44 = Double.parseDouble(number4);
+        JOptionPane.showMessageDialog(null,"Oke Angka mu adalah " +number33+" dan "+number44);
+        String operatorz = JOptionPane.showInputDialog("Mau ditambah (1) atau dikurang (2) nih ? ( masukin angka 1 untuk tambah 2 untuk kurang )");
+        double operatory = Double.parseDouble(operatorz);
+        double result2;
+        if (operatory == 1){
+            result2 = number33 + number44;
+            JOptionPane.showMessageDialog(null,"Hasilnya tambahnya adalah " +result2);
+        }else if(operatory == 2){
+            result2 = number33 - number44;
+            JOptionPane.showMessageDialog(null,"Hasilnya kurangnya adalah " +result2);
+        }else{
+            JOptionPane.showMessageDialog(null,"Kamu harusnya masukin 1 atau 2 yaudah deh lanjut");
+        }
+
+        //end
+        JOptionPane.showMessageDialog(null, "Makasih yaa "+name+" udah mau kenalan! See you.");
+
+    }
+}
